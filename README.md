@@ -6,7 +6,9 @@ Redis should be installed on your system,
 clone the repo
 
 run npm i -f
+
 run redis-server
+
 npm start
 
 To get the single safe call the below API- 

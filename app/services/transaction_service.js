@@ -1,6 +1,7 @@
 const transactionService = require('../services/external_transaction_service');
 const redisService = require('../services/redis_service');
 const utilService = require('../heplers/util');
+const errorMessages = require('../constants/error_messages');
 
 exports.findOne = async address => {
     try {
@@ -13,7 +14,8 @@ exports.findOne = async address => {
       await redisService.setKey(cacheKey,JSON.stringify(data))
       return data
     } catch (err) {
-      throw 'error in finding balance data';
+        return transactionService.getBalanceForAddress(address);
+        throw errorMessages.ERROR_MESSAGES.ERROR_FINDING_BALANCE;
     }
   };
 
@@ -30,6 +32,6 @@ exports.findMultiple = async addresses => {
         }
         return data
     } catch (err) {
-      throw 'error in finding balance data';
+        throw errorMessages.ERROR_MESSAGES.ERROR_FINDING_BALANCE;
     }
   };

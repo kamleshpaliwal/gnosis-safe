@@ -12,8 +12,8 @@ run redis-server
 npm start
 
 To get the single safe call the below API- 
-http://localhost:8080/api/balance/findOne/0x89C51828427F70D77875C6747759fB17Ba10Ceb0
+http://localhost:8080/api/balance/adresses/0x89C51828427F70D77875C6747759fB17Ba10Ceb0
 
 To get the multiple safe call the below API - 
-http://localhost:8080/api/balance/findMultiple?addressList=0x89C51828427F70D77875C6747759fB17Ba10Ceb0&addressList=0xf26d1Bb347a59F6C283C53156519cC1B1ABacA51
+http://localhost:8080/api/balance/adresses?addressList=0x89C51828427F70D77875C6747759fB17Ba10Ceb0&addressList=0xf26d1Bb347a59F6C283C53156519cC1B1ABacA51
 

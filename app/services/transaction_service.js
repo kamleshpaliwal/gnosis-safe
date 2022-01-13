@@ -1,6 +1,6 @@
 const transactionService = require('../services/external_transaction_service');
 const redisService = require('../services/redis_service');
-const utilService = require('../heplers/util');
+const utilService = require('../helpers/util');
 const errorMessages = require('../constants/error_messages');
 
 exports.findOne = async address => {

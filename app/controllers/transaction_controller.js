@@ -1,4 +1,4 @@
-const apiHandler = require('../heplers/apihandler');
+const apiHandler = require('../helpers/apihandler');
 const transactionService = require('../services/transaction_service');
 
 exports.findOne = async (req, res) => {
